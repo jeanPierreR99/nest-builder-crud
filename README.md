@@ -3,6 +3,7 @@
 Esta aplicación es un **CRUD (Crear, Leer, Actualizar, Eliminar)** desarrollado utilizando **NestJS**, un potente framework para construir aplicaciones de servidor en Node.js. La aplicación se centra en la creación automática de componentes esenciales para gestionar datos a través de una API RESTful.
 
 ![db](/images/output.png)
+
 ## Funcionalidad Principal
 
 La aplicación permite a los usuarios interactuar con un conjunto de entidades mediante una API, generando automáticamente:
@@ -37,8 +38,8 @@ Esta configuración define las propiedades, relaciones y nodos para cada entidad
       relations: [ // relacion entre entidades
         {
           type: 'one-to-many', // one-to-one, one-to-many , many-to-one, many-to-many
-          target: 'NewRelation' } // Entidad que se relaciona
-          joinTable: true // agregar solo si la relacion es many-to-may u one-to-one y si es la entidad que llevara la relacion fuerte
+          target: 'NewRelation', // Entidad que se relaciona
+          joinTable: true} // agregar solo si la relacion es many-to-may u one-to-one y si es la entidad que llevara la relacion fuerte
         ],
       nodoRelations: [ ],// nodo de relacion si se tiene conocimiento de typeorm (find({ relations: ['books','books.author']});) o agregar las relaciones directamente en el servicio generado
     },
@@ -50,8 +51,9 @@ Esta configuración define las propiedades, relaciones y nodos para cada entidad
 
 - Consfigurar el archivo controllers/generate/GenerateEntitiesController
 - npm run start:dev
-- hacer Post a  /entities
+- hacer Post a /entities
 - Ingresar a la documentación: localhost/4000/api
+
 ### salida
 
 ## ![db](/images/output-2.png)
